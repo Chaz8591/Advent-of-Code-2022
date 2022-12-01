@@ -2261,19 +2261,19 @@ day1input = """
 4056
 7203
 3175"""
-day1array = day1input.splitlines()
-total = 0
-array = []
+day1array = day1input.splitlines() # Create list from multiline string
+total = 0 # Sets variable to add calories for each elf
+array = [] # Creates empty array for calorie totals
 for num in day1array:
-    if num == "":
-        array.append(total)
-        total = 0
+    if num == "": # Starts a new total for each elf when it reaches a blank calorie amount in the list
+        array.append(total) # Adds total to array
+        total = 0 # Resets total to 0 for new elf
     else:
-        total += int(num.replace("\n", ""))
-#print(max(array)) # Solution for Part 1
-total = 0
-for i in range(3):
-    most = (max(array))
-    total += most
-    array[array.index(most)] = 0
-print(total)
+        total += int(num) # Adds different calories to each elf's running total
+print(max(array)) # Solution for Part 1
+total = 0 # Resets total folr reuse
+for i in range(3): # For top 3 ammounts
+    most = (max(array)) # Get the top amount
+    total += most # Add it to the total
+    array[array.index(most)] = 0 # Set top amount to 0
+print(total) # Solution for Part 2
