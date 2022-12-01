@@ -1,5 +1,4 @@
-day1input = """
-5916
+day1input = """5916
 7281
 1715
 3853
@@ -2271,8 +2270,8 @@ for num in day1array:
     else:
         total += int(num) # Adds different calories to each elf's running total
 print(max(array)) # Solution for Part 1
-total = 0 # Resets total folr reuse
-for i in range(3): # For top 3 ammounts
+total = 0 # Resets total for reuse
+for i in range(3): # For top 3 amounts
     most = (max(array)) # Get the top amount
     total += most # Add it to the total
     array[array.index(most)] = 0 # Set top amount to 0
